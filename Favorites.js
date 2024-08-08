@@ -88,10 +88,14 @@ export class FavoritesView extends Favorites {
     onadd() {
         const addButton = this.root.querySelector('button')
         addButton.onclick = () => {
-            const { value } = this.root.querySelector('.search input')
+            const input = this.root.querySelector('.search input')
+            const value = input.value
 
+            if (!value){
+             return alert("Enter a username!")
+            }
             this.add(value)
-
+            input.value = ''
         }
     }
     
@@ -111,7 +115,7 @@ export class FavoritesView extends Favorites {
             row.querySelector('.followers').textContent = user.followers
 
             row.querySelector('.remove').onclick = () => {
-                const isOk = confirm('Tem certeza que deseja deletar essa linha?')
+                const isOk = confirm('Are you sure you want to delete this line?')
 
                 if(isOk) {
                     this.delete(user)
@@ -137,8 +141,8 @@ export class FavoritesView extends Favorites {
         <td class="user">
         <img src="https://github.com/maykbrito.png" alt="imagem de maykbrito">
         <a href="https://github.com/maykbrito" target="_blank">
-            <p>Mayk Brito</p>
-            <span>/maykbrito</span>
+            <p translate="no">Mayk Brito</p>
+            <span translate="no">/maykbrito</span>
         </a>
         </td>
         <td class="repository">
@@ -148,7 +152,7 @@ export class FavoritesView extends Favorites {
         1234
         </td>
         <td class="action">
-        <p class="remove" >Remover</p>
+        <p class="remove" >Remove</p>
         </td>
         `
         

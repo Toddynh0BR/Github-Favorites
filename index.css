@@ -174,7 +174,7 @@ td.user span {
 td.user img{
  width: 5.6rem;
  height: 5.6rem;
- 
+ border-radius: 50%;
 }
 td.repository, td.followers{
  color: var(--color-TH-Font);
