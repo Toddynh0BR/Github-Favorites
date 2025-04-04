@@ -212,6 +212,10 @@ td.action p:hover{
     max-height: 62rem;
     overflow: hidden;
     overflow-y: auto; 
+
+    flex-direction: column;
+    align-items: center;
+    display: flex;
 } 
 
 
@@ -230,7 +234,7 @@ background-color: none;
 
 
 .none {
- width: 100.1rem;
+ width: 100%;
  height: 62rem;
  border-radius: 0 0 .8rem .8rem;
  border-top: 10px solid var(--color-TH-Header);
@@ -245,13 +249,12 @@ background-color: none;
  font-size: 2rem;
 }
 .c {
-position: absolute;
-top: 20.5rem;
-left: 17.5rem;
+
 z-index: 2;
 border: 1px solid var(--color-TH-Border);
 border-top: none;
-max-width: fit-content;
+
+width: 100%;
 border-radius: 0 0 1rem 1rem;
 }
 .star {
